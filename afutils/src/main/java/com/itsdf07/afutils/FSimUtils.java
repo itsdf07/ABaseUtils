@@ -60,12 +60,12 @@ public class FSimUtils {
      */
     public static int getSimState(Context context) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->context:%s", context);
+            FLog.eTag(TAG, "Parameter error->context:%s", context);
             return -1;
         }
         TelephonyManager tm = getTM(context);
         if (null == tm) {
-            FLog.wtf(TAG, "Parameter error->TelephonyManager:%s", tm);
+            FLog.wtfTag(TAG, "Parameter error->TelephonyManager:%s", tm);
             return -1;
         }
         int simState = tm.getSimState();
@@ -80,12 +80,12 @@ public class FSimUtils {
      */
     public static String getSimSerialNumber(Context context) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->context:%s", context);
+            FLog.eTag(TAG, "Parameter error->context:%s", context);
             return "";
         }
         TelephonyManager tm = getTM(context);
         if (null == tm) {
-            FLog.wtf(TAG, "Parameter error->TelephonyManager:%s", tm);
+            FLog.wtfTag(TAG, "Parameter error->TelephonyManager:%s", tm);
             return "";
         }
         //需要<uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -101,12 +101,12 @@ public class FSimUtils {
      */
     public static String getSimOperator(Context context) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->context:%s", context);
+            FLog.eTag(TAG, "Parameter error->context:%s", context);
             return "";
         }
         TelephonyManager tm = getTM(context);
         if (null == tm) {
-            FLog.wtf(TAG, "Parameter error->TelephonyManager:%s", tm);
+            FLog.wtfTag(TAG, "Parameter error->TelephonyManager:%s", tm);
             return "";
         }
         String simOperator = tm.getSimOperator();
@@ -121,12 +121,12 @@ public class FSimUtils {
      */
     public static String getSimOperatorName(Context context) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->context:%s", context);
+            FLog.eTag(TAG, "Parameter error->context:%s", context);
             return "";
         }
         TelephonyManager tm = getTM(context);
         if (null == tm) {
-            FLog.wtf(TAG, "Parameter error->TelephonyManager:%s", tm);
+            FLog.wtfTag(TAG, "Parameter error->TelephonyManager:%s", tm);
             return "";
         }
         String simOperatorName = tm.getSimOperatorName();
@@ -141,7 +141,7 @@ public class FSimUtils {
      */
     public static String getNetworkOperator(Context context) {
         if (null == context) {
-            FLog.e("Parameter error!");
+            FLog.eTag(TAG, "Parameter error!");
             return "";
         }
         TelephonyManager tm = getTM(context);
@@ -158,12 +158,12 @@ public class FSimUtils {
      */
     public static String getNetworkOperatorName(Context context) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->context:%s", context);
+            FLog.eTag(TAG, "Parameter error->context:%s", context);
             return "";
         }
         TelephonyManager tm = getTM(context);
         if (null == tm) {
-            FLog.wtf(TAG, "Parameter error->TelephonyManager:%s", tm);
+            FLog.wtfTag(TAG, "Parameter error->TelephonyManager:%s", tm);
             return "";
         }
         String networkOperatorName = tm.getNetworkOperatorName();
@@ -178,7 +178,7 @@ public class FSimUtils {
      */
     public static GsmCellLocation getGsmCellLocation(Context context) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->context:%s", context);
+            FLog.eTag(TAG, "Parameter error->context:%s", context);
             return null;
         }
         // 中国移动和中国联通获取LAC、CID的方式
@@ -194,7 +194,7 @@ public class FSimUtils {
      */
     public static CdmaCellLocation getCdmaCellLocation(Context context) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->context:%s", context);
+            FLog.eTag(TAG, "Parameter error->context:%s", context);
             return null;
         }
         // 中国电信获取LAC、CID的方式
@@ -204,7 +204,7 @@ public class FSimUtils {
 
     public static List<NeighboringCellInfo> getNeighboringCellInfos(Context context) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->context:%s", context);
+            FLog.eTag(TAG, "Parameter error->context:%s", context);
             return null;
         }
         return getTM(context).getNeighboringCellInfo();
@@ -234,7 +234,7 @@ public class FSimUtils {
      */
     public static void listenPhoneState(Context context, PhoneStateListener listener, int events) {
         if (null == context) {
-            FLog.e(TAG, "Parameter error->events:%s,context:%s", events, context);
+            FLog.eTag(TAG, "Parameter error->events:%s,context:%s", events, context);
             return;
         }
         getTM(context).listen(listener, events);
