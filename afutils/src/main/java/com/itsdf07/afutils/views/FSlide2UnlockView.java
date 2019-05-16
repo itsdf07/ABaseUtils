@@ -24,7 +24,7 @@ import android.view.animation.Interpolator;
 import com.itsdf07.afutils.log.FLog;
 
 /**
- * @Description 横向向左滑动解锁UI
+ * @Description 横向向右滑动解锁UI
  * @Author itsdf07
  * @Time 2019/5/14/014
  */
