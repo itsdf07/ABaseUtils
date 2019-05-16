@@ -19,4 +19,18 @@
         android:layout_height="wrap_content"
         android:text="POST接口验证" />
 
+    <com.itsdf07.afutils.views.FSlide2UnlockView
+    android:id="@+id/id_slide2unlock"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_centerHorizontal="true" />
+    <com.itsdf07.afutils.views.FGesture2UnlockView
+        android:id="@+id/id_gestrue2unlock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:correctColor="#00FF00"
+        app:lineWidth="5.0dip"
+        app:normalColor="#888888"
+        app:selectColor="#FFFF00"
+        app:wrongColor="#FF0000" />
 </LinearLayout>
